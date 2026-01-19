@@ -31,29 +31,19 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: '2020',
+      year: '2025',
       title: 'Themelimi',
-      description: 'CoreFloor Albania fillon aktivitetin si distributor i dyshemeve SPC'
+      description: 'CoreFloor Albania fillon aktivitetin si distributor ekskluziv i dyshemeve SPC profesionale në Shqipëri, duke sjellë në treg brand-et ndërkombëtare FirmFit dhe Novocore'
     },
     {
-      year: '2021',
-      title: 'Partneriteti me FirmFit',
-      description: 'Bëhemi distributor ekskluziv i FirmFit për Shqipërinë'
+      year: '2025',
+      title: 'Fokusi në Projekte',
+      description: 'Specializohemi në furnizimin e dyshemeve SPC për hotele, ambiente komerciale dhe projekte me kërkesa të larta teknike dhe certifikime ndërkombëtare'
     },
     {
-      year: '2022',
-      title: 'Zgjerimi në Projekte',
-      description: 'Fillojmë bashkëpunimin me hotele dhe projekte të mëdha ndërtimi'
-    },
-    {
-      year: '2023',
-      title: 'Partneriteti me Novocore',
-      description: 'Shtojmë Novocore në portofolio për zgjidhje premium'
-    },
-    {
-      year: '2024',
-      title: 'Lider në Treg',
-      description: 'Pozicionohemi si lider në dysheme SPC për projekte profesionale'
+      year: '2025',
+      title: 'Partneritete Strategjike',
+      description: 'Krijojmë bashkëpunime me arkitektë, kompani ndërtimi dhe zhvillues për të ofruar zgjidhje të personalizuara dhe mbështetje teknike profesionale'
     }
   ];
 
