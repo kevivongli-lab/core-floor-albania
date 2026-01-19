@@ -30,10 +30,10 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <Image 
-              src="https://static.wixstatic.com/media/b9443e_68dab4069a3942dcbcc88baf984ea631~mv2.png?originWidth=128&originHeight=128" 
+              src="https://static.wixstatic.com/media/b9443e_fb4cc59f70184f708fed7ffefb7c34b4~mv2.png" 
               alt="CoreFloor Albania Logo" 
-              width={180}
-              className="h-12 w-auto object-contain"
+              width={200}
+              className="h-14 w-auto object-contain"
             />
           </Link>
 
