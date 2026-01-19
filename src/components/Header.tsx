@@ -34,9 +34,8 @@ export default function Header() {
               width={560}
               className="h-40 w-auto object-contain border-black border border-none"
               originWidth={500}
-              originHeight={300} />
+              originHeight={200} />
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
