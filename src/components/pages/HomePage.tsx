@@ -189,7 +189,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white p-16 text-center"
+              className="p-16 text-center bg-primary-foreground"
             >
               <div className="mb-8">
                 <h3 className="font-heading text-4xl text-charcoal">Novocore</h3>

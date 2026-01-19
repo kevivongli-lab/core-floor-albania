@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,8 +29,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="font-heading text-3xl text-charcoal">CoreFloor</span>
-            <span className="font-paragraph text-sm text-secondary ml-2 mt-1">Albania</span>
+            <Image 
+              src="https://static.wixstatic.com/media/b9443e_68dab4069a3942dcbcc88baf984ea631~mv2.png?originWidth=128&originHeight=128" 
+              alt="CoreFloor Albania Logo" 
+              width={180}
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
