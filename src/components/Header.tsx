@@ -31,8 +31,8 @@ export default function Header() {
           <Link to="/" className="flex items-center">
             <Image
               src="https://static.wixstatic.com/media/b9443e_c2e6e99147a74d8295deebef979d764e~mv2.png"
-              width={200}
-              className="h-14 w-auto object-contain border-black border border-none"
+              width={280}
+              className="h-20 w-auto object-contain border-black border border-none"
               originWidth={500}
               originHeight={500} />
           </Link>
