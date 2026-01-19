@@ -19,7 +19,22 @@ export default function CertificationsPage() {
     setIsLoading(true);
     try {
       const result = await BaseCrudService.getAll<TechnicalCertifications>('certifications');
-      setCertifications(result.items);
+      
+      // Sort certifications: GreenGuard Gold first, Fire Rating second, SE+® third, rest after
+      const sorted = result.items.sort((a, b) => {
+        const nameA = a.certificationName?.toLowerCase() || '';
+        const nameB = b.certificationName?.toLowerCase() || '';
+        
+        if (nameA.includes('greenguard gold')) return -1;
+        if (nameB.includes('greenguard gold')) return 1;
+        if (nameA.includes('fire rating')) return -1;
+        if (nameB.includes('fire rating')) return 1;
+        if (nameA.includes('se+') || nameA.includes('anti-microbial')) return -1;
+        if (nameB.includes('se+') || nameB.includes('anti-microbial')) return 1;
+        return 0;
+      });
+      
+      setCertifications(sorted);
     } catch (error) {
       console.error('Error loading certifications:', error);
     } finally {
@@ -258,42 +273,6 @@ export default function CertificationsPage() {
               className="bg-white p-8"
             >
               <h3 className="font-heading text-2xl text-charcoal mb-4">
-                EPD
-              </h3>
-              <p className="font-paragraph text-sm text-secondary mb-3 font-semibold">
-                Environmental Product Declaration
-              </p>
-              <p className="font-paragraph text-sm text-secondary leading-relaxed">
-                Deklaratë mjedisore që dokumenton ndikimin e produktit në mjedis gjatë gjithë ciklit të jetës.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white p-8"
-            >
-              <h3 className="font-heading text-2xl text-charcoal mb-4">
-                HPD
-              </h3>
-              <p className="font-paragraph text-sm text-secondary mb-3 font-semibold">
-                Health Product Declaration
-              </p>
-              <p className="font-paragraph text-sm text-secondary leading-relaxed">
-                Deklaratë që dokumenton përbërësit e produktit dhe ndikimin e tyre në shëndetin e njeriut.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8"
-            >
-              <h3 className="font-heading text-2xl text-charcoal mb-4">
                 Greenguard Gold
               </h3>
               <p className="font-paragraph text-sm text-secondary mb-3 font-semibold">
@@ -308,7 +287,7 @@ export default function CertificationsPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white p-8"
             >
               <h3 className="font-heading text-2xl text-charcoal mb-4">
@@ -319,6 +298,42 @@ export default function CertificationsPage() {
               </p>
               <p className="font-paragraph text-sm text-secondary leading-relaxed">
                 Klasifikim europian i rezistencës ndaj zjarrit, i përshtatshëm për ambiente publike dhe komerciale.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-8"
+            >
+              <h3 className="font-heading text-2xl text-charcoal mb-4">
+                SE+® Anti-Microbial
+              </h3>
+              <p className="font-paragraph text-sm text-secondary mb-3 font-semibold">
+                Anti-Microbial Protection
+              </p>
+              <p className="font-paragraph text-sm text-secondary leading-relaxed">
+                Veshja anti-mikrobiale që mbron sipërfaqen e dyshemesë në mënyrë të vazhdueshme kundër mikrobeve të dëmshme.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white p-8"
+            >
+              <h3 className="font-heading text-2xl text-charcoal mb-4">
+                HPD & EPD
+              </h3>
+              <p className="font-paragraph text-sm text-secondary mb-3 font-semibold">
+                Health & Environmental Product Declarations
+              </p>
+              <p className="font-paragraph text-sm text-secondary leading-relaxed">
+                Deklarata që dokumentojnë përbërësit e produktit, ndikimin në shëndetin e njeriut dhe ndikimin mjedisor gjatë ciklit të jetës.
               </p>
             </motion.div>
 
