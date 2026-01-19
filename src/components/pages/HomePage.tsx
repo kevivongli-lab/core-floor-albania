@@ -77,21 +77,21 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-charcoal/60"></div>
         </div>
         
-        <div className="relative z-10 w-full max-w-[100rem] mx-auto px-20">
+        <div className="relative z-10 w-full max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="font-heading text-6xl text-white mb-6 md:text-5xl">{"Dysheme SPC Profesionale për Hotele, Arkitektë dhe Projekte"}</h1>
-            <p className="font-paragraph text-xl text-white/90 mb-10 leading-relaxed">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6">{"Dysheme SPC Profesionale për Hotele, Arkitektë dhe Projekte"}</h1>
+            <p className="font-paragraph text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-10 leading-relaxed">
               Zgjidhje të certifikuara, waterproof dhe akustike për përdorim afatgjatë.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
               <Button 
                 size="lg" 
-                className="hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-8 py-6 text-lg bg-[#b8864fff]"
+                className="hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg bg-[#b8864fff] w-full sm:w-auto"
                 onClick={() => window.location.href = '/kontakt'}
               >
                 Kërko Ofertë
@@ -99,7 +99,7 @@ export default function HomePage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30 font-paragraph font-semibold px-8 py-6 text-lg backdrop-blur-sm"
+                className="bg-white/10 hover:bg-white/20 text-white border-white/30 font-paragraph font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg backdrop-blur-sm w-full sm:w-auto"
                 onClick={() => window.location.href = '/kontakt'}
               >
                 Kërko Mostra
@@ -109,24 +109,24 @@ export default function HomePage() {
         </div>
       </section>
       {/* Advantages Section */}
-      <section className="w-full py-32 bg-white">
-        <div className="max-w-[100rem] mx-auto px-20">
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="font-heading text-5xl text-charcoal mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal mb-4 md:mb-6">
               Avantazhet Kryesore
             </h2>
-            <p className="font-paragraph text-lg text-secondary max-w-3xl mx-auto">
+            <p className="font-paragraph text-base md:text-lg text-secondary max-w-3xl mx-auto">
               Dysheme SPC me performancë të lartë për projekte profesionale
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
             {advantages.map((advantage, index) => (
               <motion.div
                 key={index}
@@ -136,13 +136,13 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 mb-6 rounded-sm bg-[#b8864fff]">
-                  <advantage.icon className="w-10 h-10 text-charcoal" strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 mb-4 md:mb-6 rounded-sm bg-[#b8864fff]">
+                  <advantage.icon className="w-8 h-8 md:w-10 md:h-10 text-charcoal" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-heading text-2xl text-charcoal mb-3">
+                <h3 className="font-heading text-xl md:text-2xl text-charcoal mb-2 md:mb-3">
                   {advantage.title}
                 </h3>
-                <p className="font-paragraph text-base text-secondary leading-relaxed">
+                <p className="font-paragraph text-sm md:text-base text-secondary leading-relaxed">
                   {advantage.description}
                 </p>
               </motion.div>
@@ -151,32 +151,32 @@ export default function HomePage() {
         </div>
       </section>
       {/* Brands Section */}
-      <section className="w-full py-32 bg-background">
-        <div className="max-w-[100rem] mx-auto px-20">
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-background">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="font-heading text-5xl text-charcoal mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal mb-4 md:mb-6">
               Brand-et Tona
             </h2>
-            <p className="font-paragraph text-lg text-secondary max-w-3xl mx-auto">
+            <p className="font-paragraph text-base md:text-lg text-secondary max-w-3xl mx-auto">
               Distributor ekskluziv në Shqipëri i brand-eve ndërkombëtare SPC për projekte
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-16 text-center"
+              className="bg-white p-8 md:p-12 lg:p-16 text-center"
             >
-              <div className="mb-8 flex justify-center">
+              <div className="mb-6 md:mb-8 flex justify-center">
                 <Image
                   src="https://static.wixstatic.com/media/b9443e_067fdfbc9df84099871d5ba339a80b1f~mv2.png"
                   width={1575}
@@ -184,7 +184,7 @@ export default function HomePage() {
                   originWidth={1771}
                   originHeight={510} />
               </div>
-              <p className="font-paragraph text-base text-secondary leading-relaxed">
+              <p className="font-paragraph text-sm md:text-base text-secondary leading-relaxed">
                 Brand ndërkombëtar SPC me fokus te projektet profesionale dhe përdorimi komercial
               </p>
             </motion.div>
@@ -194,9 +194,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="p-16 text-center bg-primary-foreground"
+              className="p-8 md:p-12 lg:p-16 text-center bg-primary-foreground"
             >
-              <div className="mb-8 flex justify-center">
+              <div className="mb-6 md:mb-8 flex justify-center">
                 <Image 
                   src="https://static.wixstatic.com/media/b9443e_98970eab824a4f79b6c95935d0c0355c~mv2.png" 
                   alt="Novocore - The NEXT Revolution in Waterproof Floors" 
@@ -205,7 +205,7 @@ export default function HomePage() {
                   loading="lazy"
                 />
               </div>
-              <p className="font-paragraph text-base text-secondary leading-relaxed">
+              <p className="font-paragraph text-sm md:text-base text-secondary leading-relaxed">
                 Zgjidhje SPC me certifikime të larta për ambiente të shëndetshme dhe performancë të qëndrueshme
               </p>
             </motion.div>
@@ -213,24 +213,24 @@ export default function HomePage() {
         </div>
       </section>
       {/* Applications Section */}
-      <section className="w-full py-32 bg-white">
-        <div className="max-w-[100rem] mx-auto px-20">
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="font-heading text-5xl text-charcoal mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal mb-4 md:mb-6">
               Ku Përdoret SPC Ynë
             </h2>
-            <p className="font-paragraph text-lg text-secondary max-w-3xl mx-auto">
+            <p className="font-paragraph text-base md:text-lg text-secondary max-w-3xl mx-auto">
               Zgjidhje të përshtatshme për çdo lloj projekti profesional
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {applications.map((app, index) => (
               <motion.div
                 key={index}
@@ -240,7 +240,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative overflow-hidden group"
               >
-                <div className="relative h-96">
+                <div className="relative h-64 sm:h-80 md:h-96">
                   <Image
                     src={app.image}
                     alt={app.title}
@@ -248,11 +248,11 @@ export default function HomePage() {
                     width={800}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-10">
-                    <h3 className="font-heading text-3xl text-white mb-3">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10">
+                    <h3 className="font-heading text-2xl md:text-3xl text-white mb-2 md:mb-3">
                       {app.title}
                     </h3>
-                    <p className="font-paragraph text-base text-white/90">
+                    <p className="font-paragraph text-sm md:text-base text-white/90">
                       {app.description}
                     </p>
                   </div>
@@ -263,23 +263,23 @@ export default function HomePage() {
         </div>
       </section>
       {/* Final CTA Section */}
-      <section className="w-full py-32 bg-charcoal">
-        <div className="max-w-[100rem] mx-auto px-20 text-center">
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-charcoal">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-heading text-5xl text-white mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 md:mb-6">
               Le ta Diskutojmë Projektin Tuaj
             </h2>
-            <p className="font-paragraph text-xl text-white/80 mb-10 max-w-3xl mx-auto">
+            <p className="font-paragraph text-base sm:text-lg md:text-xl text-white/80 mb-8 md:mb-10 max-w-3xl mx-auto">
               Ekipi ynë është gati të ju ndihmojë me konsulencë teknike, mostra dhe oferta të personalizuara
             </p>
             <Button 
               size="lg" 
-              className="hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-10 py-6 text-lg bg-[#b8864fff]"
+              className="hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg bg-[#b8864fff] w-full sm:w-auto"
               onClick={() => window.location.href = '/kontakt'}
             >
               Na Kontakto
