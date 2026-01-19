@@ -38,11 +38,11 @@ export default function Footer() {
                 className="flex items-center gap-3 font-paragraph text-sm text-white/70 hover:text-accent-gold transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>+355 12 345 6789</span>
+                <span>{"+355 69 65 80 444"}</span>
               </a>
               <div className="flex items-start gap-3 font-paragraph text-sm text-white/70">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Tiranë, Shqipëri</span>
+                <span>{"Vlorë, Shqipëri"}</span>
               </div>
             </div>
           </div>
