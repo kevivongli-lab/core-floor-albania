@@ -279,7 +279,7 @@ export default function HomePage() {
             </p>
             <Button 
               size="lg" 
-              className="bg-accent-gold hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-10 py-6 text-lg"
+              className="hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-10 py-6 text-lg bg-[#b8864fff]"
               onClick={() => window.location.href = '/kontakt'}
             >
               Na Kontakto
