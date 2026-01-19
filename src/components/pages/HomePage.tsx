@@ -177,12 +177,12 @@ export default function HomePage() {
               className="bg-white p-16 text-center"
             >
               <div className="mb-8 flex justify-center">
-                <Image 
-                  src="https://static.wixstatic.com/media/b9443e_1f2e64823dd0484199056f6417815d18~mv2.png" 
-                  alt="FirmFit Logo" 
+                <Image
+                  src="https://static.wixstatic.com/media/b9443e_067fdfbc9df84099871d5ba339a80b1f~mv2.png"
                   width={1575}
                   className="h-auto max-w-full"
-                />
+                  originWidth={1771}
+                  originHeight={510} />
               </div>
               <p className="font-paragraph text-base text-secondary leading-relaxed">
                 Brand ndërkombëtar SPC me fokus te projektet profesionale dhe përdorimi komercial
