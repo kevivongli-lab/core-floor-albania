@@ -26,13 +26,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-light-grey/20">
       <div className="max-w-[100rem] mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-[6.67rem]">
+        <div className="flex items-center justify-between h-16 md:h-20 lg:h-[6.67rem]">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <Image
               src="https://static.wixstatic.com/media/b9443e_c2e6e99147a74d8295deebef979d764e~mv2.png"
               width={560}
-              className="h-[6.67rem] w-auto object-contain border-black border border-none"
+              className="h-12 md:h-16 lg:h-[6.67rem] w-auto object-contain"
               originWidth={500}
               originHeight={400} />
           </Link>
