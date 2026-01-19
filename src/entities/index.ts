@@ -124,6 +124,8 @@ export interface SPCFlooringProducts {
   _updatedDate?: Date;
   /** @wixFieldType text */
   productName?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  secondaryImage?: string;
   /** @wixFieldType text */
   description?: string;
   /** @wixFieldType text */
