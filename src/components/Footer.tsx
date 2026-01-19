@@ -42,7 +42,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3 font-paragraph text-sm text-white/70">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>{"Vlorë, Shqipëri"}</span>
+                <span>{"Vlore=ë, Shqipëri"}</span>
               </div>
             </div>
           </div>

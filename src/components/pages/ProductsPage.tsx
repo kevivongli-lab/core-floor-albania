@@ -7,12 +7,13 @@ import { BaseCrudService } from '@/integrations';
 import { SPCFlooringProducts } from '@/entities';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Droplets, Shield, Volume2, Layers } from 'lucide-react';
+import { Droplets, Shield, Volume2, Layers, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<SPCFlooringProducts[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [currentImageIndex, setCurrentImageIndex] = useState<Record<string, number>>({});
 
   useEffect(() => {
     loadProducts();
@@ -35,6 +36,30 @@ export default function ProductsPage() {
   const filteredProducts = selectedCategory === 'all' 
     ? products 
     : products.filter(p => p.category === selectedCategory);
+
+  const getProductImages = (product: SPCFlooringProducts) => {
+    const images = [];
+    if (product.productImage) images.push(product.productImage);
+    if (product.secondaryImage) images.push(product.secondaryImage);
+    if (images.length === 0) {
+      images.push('https://static.wixstatic.com/media/b9443e_0f7a55d87c2d4b4e81d7c31a806ac2e7~mv2.png?originWidth=576&originHeight=448');
+    }
+    return images;
+  };
+
+  const handlePrevImage = (productId: string, totalImages: number) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [productId]: ((prev[productId] || 0) - 1 + totalImages) % totalImages
+    }));
+  };
+
+  const handleNextImage = (productId: string, totalImages: number) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [productId]: ((prev[productId] || 0) + 1) % totalImages
+    }));
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -85,22 +110,60 @@ export default function ProductsPage() {
         <div className="max-w-[100rem] mx-auto px-20">
           {isLoading ? null : filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProducts.map((product, index) => (
-                <motion.div
-                  key={product._id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white overflow-hidden group"
-                >
-                  <div className="relative h-80 overflow-hidden">
-                    <Image
-                      src={product.productImage || 'https://static.wixstatic.com/media/b9443e_0f7a55d87c2d4b4e81d7c31a806ac2e7~mv2.png?originWidth=576&originHeight=448'}
-                      alt={product.productName || 'SPC Product'}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      width={600}
-                    />
-                  </div>
+              {filteredProducts.map((product, index) => {
+                const images = getProductImages(product);
+                const currentIndex = currentImageIndex[product._id] || 0;
+                const hasMultipleImages = images.length > 1;
+
+                return (
+                  <motion.div
+                    key={product._id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white overflow-hidden group"
+                  >
+                    <div className="relative h-80 overflow-hidden">
+                      <Image
+                        src={images[currentIndex]}
+                        alt={product.productName || 'SPC Product'}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        width={600}
+                      />
+                      
+                      {hasMultipleImages && (
+                        <>
+                          <button
+                            onClick={() => handlePrevImage(product._id, images.length)}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-charcoal p-2 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100"
+                            aria-label="Previous image"
+                          >
+                            <ChevronLeft className="w-5 h-5" />
+                          </button>
+                          
+                          <button
+                            onClick={() => handleNextImage(product._id, images.length)}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-charcoal p-2 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100"
+                            aria-label="Next image"
+                          >
+                            <ChevronRight className="w-5 h-5" />
+                          </button>
+
+                          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                            {images.map((_, idx) => (
+                              <button
+                                key={idx}
+                                onClick={() => setCurrentImageIndex(prev => ({ ...prev, [product._id]: idx }))}
+                                className={`w-2 h-2 rounded-full transition-all ${
+                                  idx === currentIndex ? 'bg-white w-6' : 'bg-white/50'
+                                }`}
+                                aria-label={`Go to image ${idx + 1}`}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
                   
                   <div className="p-8">
                     {product.category && (
@@ -182,7 +245,8 @@ export default function ProductsPage() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              );
+              })}
             </div>
           ) : (
             <div className="text-center py-20">

@@ -247,7 +247,7 @@ export default function ContactPage() {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full bg-accent-gold hover:bg-accent-gold/90 text-white font-paragraph font-semibold"
+                  className="w-full hover:bg-accent-gold/90 text-white font-paragraph font-semibold bg-[#b8864fff]"
                 >
                   {isSubmitting ? (
                     'Duke dërguar...'
@@ -340,9 +340,7 @@ export default function ContactPage() {
             <p className="font-paragraph text-lg text-secondary mb-2">
               CoreFloor Albania
             </p>
-            <p className="font-paragraph text-base text-secondary">
-              Tiranë, Shqipëri
-            </p>
+            <p className="font-paragraph text-base text-secondary">{"Vlorë, Shqipëri"}</p>
           </motion.div>
         </div>
       </section>
