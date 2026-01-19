@@ -65,7 +65,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
       {/* Hero Section */}
       <section className="relative w-full max-w-[120rem] mx-auto min-h-[85vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -85,9 +84,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="font-heading text-6xl md:text-7xl text-white mb-6">
-              Dysheme SPC Profesionale për Hotele, Arkitektë dhe Projekte
-            </h1>
+            <h1 className="font-heading text-6xl text-white mb-6 md:text-5xl">{"Dysheme SPC Profesionale për Hotele, Arkitektë dhe Projekte"}</h1>
             <p className="font-paragraph text-xl text-white/90 mb-10 leading-relaxed">
               Zgjidhje të certifikuara, waterproof dhe akustike për përdorim afatgjatë.
             </p>
@@ -111,7 +108,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* Advantages Section */}
       <section className="w-full py-32 bg-white">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -154,7 +150,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Brands Section */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -206,7 +201,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Applications Section */}
       <section className="w-full py-32 bg-white">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -257,7 +251,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Final CTA Section */}
       <section className="w-full py-32 bg-charcoal">
         <div className="max-w-[100rem] mx-auto px-20 text-center">
@@ -283,7 +276,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
