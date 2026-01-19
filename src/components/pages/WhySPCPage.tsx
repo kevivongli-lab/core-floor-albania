@@ -58,7 +58,6 @@ export default function WhySPCPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-white py-24">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -77,7 +76,6 @@ export default function WhySPCPage() {
           </motion.div>
         </div>
       </section>
-
       {/* What is SPC */}
       <section className="w-full py-24 bg-background">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -110,16 +108,15 @@ export default function WhySPCPage() {
               className="relative h-[500px]"
             >
               <Image
-                src="https://static.wixstatic.com/media/b9443e_9e4b391e0c7d42a194c6ff41562b4586~mv2.png?originWidth=768&originHeight=448"
-                alt="SPC Flooring Technology"
+                src="https://static.wixstatic.com/media/b9443e_ef54391b1b8a4c4fb15fa68e634a95a6~mv2.jpg"
                 className="w-full h-full object-cover"
                 width={800}
-              />
+                originWidth={960}
+                originHeight={1280} />
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* SPC vs Laminate Comparison */}
       <section className="w-full py-24 bg-white">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -179,7 +176,6 @@ export default function WhySPCPage() {
           </div>
         </div>
       </section>
-
       {/* Educational Topics from CMS */}
       <section className="w-full py-24 bg-background min-h-[400px]">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -243,7 +239,6 @@ export default function WhySPCPage() {
           ) : null}
         </div>
       </section>
-
       {/* Why SPC for Hotels */}
       <section className="w-full py-24 bg-white">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -316,7 +311,6 @@ export default function WhySPCPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
