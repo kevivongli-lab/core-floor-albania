@@ -91,7 +91,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 size="lg" 
-                className="bg-accent-gold hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-8 py-6 text-lg"
+                className="hover:bg-accent-gold/90 text-white font-paragraph font-semibold px-8 py-6 text-lg bg-[#b8864fff]"
                 onClick={() => window.location.href = '/kontakt'}
               >
                 Kërko Ofertë
