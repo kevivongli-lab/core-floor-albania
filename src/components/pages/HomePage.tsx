@@ -176,8 +176,13 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
               className="bg-white p-16 text-center"
             >
-              <div className="mb-8">
-                <h3 className="font-heading text-4xl text-charcoal">FirmFit</h3>
+              <div className="mb-8 flex justify-center">
+                <Image 
+                  src="https://static.wixstatic.com/media/b9443e_1f2e64823dd0484199056f6417815d18~mv2.png" 
+                  alt="FirmFit Logo" 
+                  width={400}
+                  className="h-auto max-w-full"
+                />
               </div>
               <p className="font-paragraph text-base text-secondary leading-relaxed">
                 Brand ndërkombëtar SPC me fokus te projektet profesionale dhe përdorimi komercial
