@@ -180,7 +180,7 @@ export default function HomePage() {
                 <Image 
                   src="https://static.wixstatic.com/media/b9443e_1f2e64823dd0484199056f6417815d18~mv2.png" 
                   alt="FirmFit Logo" 
-                  width={1050}
+                  width={1575}
                   className="h-auto max-w-full"
                 />
               </div>
