@@ -64,7 +64,6 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-white py-24">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -83,7 +82,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="w-full bg-background py-12 border-b border-light-grey/30">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -104,7 +102,6 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
-
       {/* Products Grid */}
       <section className="w-full py-24 min-h-[600px]">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -164,88 +161,87 @@ export default function ProductsPage() {
                         </>
                       )}
                     </div>
-                  
-                  <div className="p-8">
-                    {product.category && (
-                      <span className="inline-block font-paragraph text-xs text-secondary uppercase tracking-wider mb-3">
-                        {product.category}
-                      </span>
-                    )}
-                    
-                    <h3 className="font-heading text-2xl text-charcoal mb-4">
-                      {product.productName}
-                    </h3>
-                    
-                    <p className="font-paragraph text-sm text-secondary leading-relaxed mb-6">
-                      {product.description}
-                    </p>
+                    <div className="p-8">
+                      {product.category && (
+                        <span className="inline-block font-paragraph text-xs text-secondary uppercase tracking-wider mb-3">
+                          {product.category}
+                        </span>
+                      )}
+                      
+                      <h3 className="font-heading text-2xl text-charcoal mb-4">
+                        {product.productName}
+                      </h3>
+                      
+                      <p className="font-paragraph text-sm text-secondary leading-relaxed mb-6">
+                        {product.description}
+                      </p>
 
-                    {/* Technical Specs */}
-                    <div className="space-y-3 mb-6 pb-6 border-b border-light-grey/30">
-                      {product.totalThickness && (
-                        <div className="flex items-center gap-3">
-                          <Layers className="w-4 h-4 text-secondary" />
-                          <span className="font-paragraph text-sm text-secondary">
-                            Trashësia: <span className="text-charcoal font-semibold">{product.totalThickness} mm</span>
-                          </span>
-                        </div>
-                      )}
-                      
-                      {product.wearLayer && (
-                        <div className="flex items-center gap-3">
-                          <Shield className="w-4 h-4 text-secondary" />
-                          <span className="font-paragraph text-sm text-secondary">
-                            Wear Layer: <span className="text-charcoal font-semibold">{product.wearLayer} mm</span>
-                          </span>
-                        </div>
-                      )}
-                      
-                      {product.usageClass && (
-                        <div className="flex items-center gap-3">
-                          <Shield className="w-4 h-4 text-secondary" />
-                          <span className="font-paragraph text-sm text-secondary">
-                            Class: <span className="text-charcoal font-semibold">{product.usageClass}</span>
-                          </span>
-                        </div>
-                      )}
-                      
-                      {product.acousticRating && (
-                        <div className="flex items-center gap-3">
-                          <Volume2 className="w-4 h-4 text-secondary" />
-                          <span className="font-paragraph text-sm text-secondary">
-                            Akustikë: <span className="text-charcoal font-semibold">{product.acousticRating} dB</span>
-                          </span>
-                        </div>
-                      )}
-                      
-                      {product.clickSystem && (
-                        <div className="flex items-center gap-3">
-                          <Droplets className="w-4 h-4 text-secondary" />
-                          <span className="font-paragraph text-sm text-secondary">
-                            Sistem: <span className="text-charcoal font-semibold">{product.clickSystem}</span>
-                          </span>
-                        </div>
-                      )}
-                    </div>
+                      {/* Technical Specs */}
+                      <div className="space-y-3 mb-6 pb-6 border-b border-light-grey/30">
+                        {product.totalThickness && (
+                          <div className="flex items-center gap-3">
+                            <Layers className="w-4 h-4 text-secondary" />
+                            <span className="font-paragraph text-sm text-secondary">
+                              Trashësia: <span className="text-charcoal font-semibold">{product.totalThickness} mm</span>
+                            </span>
+                          </div>
+                        )}
+                        
+                        {product.wearLayer && (
+                          <div className="flex items-center gap-3">
+                            <Shield className="w-4 h-4 text-secondary" />
+                            <span className="font-paragraph text-sm text-secondary">
+                              Wear Layer: <span className="text-charcoal font-semibold">{product.wearLayer} mm</span>
+                            </span>
+                          </div>
+                        )}
+                        
+                        {product.usageClass && (
+                          <div className="flex items-center gap-3">
+                            <Shield className="w-4 h-4 text-secondary" />
+                            <span className="font-paragraph text-sm text-secondary">
+                              Class: <span className="text-charcoal font-semibold">{product.usageClass}</span>
+                            </span>
+                          </div>
+                        )}
+                        
+                        {product.acousticRating && (
+                          <div className="flex items-center gap-3">
+                            <Volume2 className="w-4 h-4 text-secondary" />
+                            <span className="font-paragraph text-sm text-secondary">
+                              Akustikë: <span className="text-charcoal font-semibold">{product.acousticRating} dB</span>
+                            </span>
+                          </div>
+                        )}
+                        
+                        {product.clickSystem && (
+                          <div className="flex items-center gap-3">
+                            <Droplets className="w-4 h-4 text-secondary" />
+                            <span className="font-paragraph text-sm text-secondary">
+                              Sistem: <span className="text-charcoal font-semibold">{product.clickSystem}</span>
+                            </span>
+                          </div>
+                        )}
+                      </div>
 
-                    <div className="flex flex-col gap-3">
-                      <Button
-                        variant="outline"
-                        className="w-full border-charcoal text-charcoal hover:bg-charcoal hover:text-white"
-                        onClick={() => window.location.href = '/kontakt'}
-                      >
-                        Kërko Skedë Teknike
-                      </Button>
-                      <Button
-                        className="w-full bg-accent-gold hover:bg-accent-gold/90 text-white"
-                        onClick={() => window.location.href = '/kontakt'}
-                      >
-                        Kërko Mostra
-                      </Button>
+                      <div className="flex flex-col gap-3">
+                        <Button
+                          variant="outline"
+                          className="w-full border-charcoal text-charcoal hover:bg-charcoal hover:text-white"
+                          onClick={() => window.location.href = '/kontakt'}
+                        >
+                          Kërko Skedë Teknike
+                        </Button>
+                        <Button
+                          className="w-full hover:bg-accent-gold/90 text-white bg-[#b8864fff]"
+                          onClick={() => window.location.href = '/kontakt'}
+                        >
+                          Kërko Mostra
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              );
+                  </motion.div>
+                );
               })}
             </div>
           ) : (
@@ -257,7 +253,6 @@ export default function ProductsPage() {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full py-24 bg-white">
         <div className="max-w-[100rem] mx-auto px-20 text-center">
@@ -283,7 +278,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
