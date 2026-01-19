@@ -75,27 +75,27 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="w-full bg-white py-24">
-        <div className="max-w-[100rem] mx-auto px-20">
+      <section className="w-full bg-white py-16 md:py-24">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="font-heading text-6xl text-charcoal mb-6">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-charcoal mb-4 md:mb-6">
               Kontakt
             </h1>
-            <p className="font-paragraph text-xl text-secondary leading-relaxed">
+            <p className="font-paragraph text-base sm:text-lg md:text-xl text-secondary leading-relaxed">
               Na tregoni për projektin tuaj dhe ne do t'ju ndihmojmë të gjeni zgjidhjen e duhur
             </p>
           </motion.div>
         </div>
       </section>
       {/* Contact Info Cards */}
-      <section className="w-full py-16 bg-background">
-        <div className="max-w-[100rem] mx-auto px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="w-full py-12 md:py-16 bg-background">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
@@ -103,23 +103,23 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 text-center"
+                className="bg-white p-6 md:p-8 text-center"
               >
-                <div className="w-16 h-16 rounded-sm mx-auto mb-6 flex items-center justify-center bg-[#b8864fff]">
-                  <info.icon className="w-8 h-8 text-charcoal" strokeWidth={1.5} />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-sm mx-auto mb-4 md:mb-6 flex items-center justify-center bg-[#b8864fff]">
+                  <info.icon className="w-7 h-7 md:w-8 md:h-8 text-charcoal" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-heading text-xl text-charcoal mb-3">
+                <h3 className="font-heading text-lg md:text-xl text-charcoal mb-2 md:mb-3">
                   {info.title}
                 </h3>
                 {info.link ? (
                   <a
                     href={info.link}
-                    className="font-paragraph text-base text-secondary hover:text-accent-gold transition-colors"
+                    className="font-paragraph text-sm md:text-base text-secondary hover:text-accent-gold transition-colors"
                   >
                     {info.value}
                   </a>
                 ) : (
-                  <p className="font-paragraph text-base text-secondary">
+                  <p className="font-paragraph text-sm md:text-base text-secondary">
                     {info.value}
                   </p>
                 )}
@@ -129,9 +129,9 @@ export default function ContactPage() {
         </div>
       </section>
       {/* Contact Form */}
-      <section className="w-full py-24 bg-white">
-        <div className="max-w-[100rem] mx-auto px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="w-full py-16 md:py-24 bg-white">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -139,14 +139,14 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-heading text-4xl text-charcoal mb-6">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-charcoal mb-4 md:mb-6">
                 Dërgoni një Mesazh
               </h2>
-              <p className="font-paragraph text-base text-secondary mb-8 leading-relaxed">
+              <p className="font-paragraph text-sm md:text-base text-secondary mb-6 md:mb-8 leading-relaxed">
                 Plotësoni formularin dhe ekipi ynë do t'ju kontaktojë brenda 24 orëve.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div>
                   <Label htmlFor="name" className="font-paragraph text-sm text-charcoal mb-2 block">
                     Emri dhe Mbiemri *
@@ -267,52 +267,52 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-background p-12"
+              className="bg-background p-6 md:p-8 lg:p-12"
             >
-              <h3 className="font-heading text-3xl text-charcoal mb-6">
+              <h3 className="font-heading text-2xl sm:text-3xl text-charcoal mb-4 md:mb-6">
                 Si Mund t'ju Ndihmojmë?
               </h3>
 
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8">
                 <div>
-                  <h4 className="font-paragraph text-lg font-semibold text-charcoal mb-3">
+                  <h4 className="font-paragraph text-base sm:text-lg font-semibold text-charcoal mb-2 md:mb-3">
                     Kërko Ofertë
                   </h4>
-                  <p className="font-paragraph text-sm text-secondary leading-relaxed">
+                  <p className="font-paragraph text-xs sm:text-sm text-secondary leading-relaxed">
                     Dërgoni detajet e projektit tuaj dhe do të merrni një ofertë të personalizuar brenda 24-48 orëve.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-paragraph text-lg font-semibold text-charcoal mb-3">
+                  <h4 className="font-paragraph text-base sm:text-lg font-semibold text-charcoal mb-2 md:mb-3">
                     Kërko Mostra
                   </h4>
-                  <p className="font-paragraph text-sm text-secondary leading-relaxed">
+                  <p className="font-paragraph text-xs sm:text-sm text-secondary leading-relaxed">
                     Dëshironi të shihni dhe prekni produktet? Dërgojmë mostra falas për vlerësim.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-paragraph text-lg font-semibold text-charcoal mb-3">
+                  <h4 className="font-paragraph text-base sm:text-lg font-semibold text-charcoal mb-2 md:mb-3">
                     Rezervo Takim Teknik
                   </h4>
-                  <p className="font-paragraph text-sm text-secondary leading-relaxed">
+                  <p className="font-paragraph text-xs sm:text-sm text-secondary leading-relaxed">
                     Takohuni me ekipin tonë teknik për konsulencë të detajuar dhe zgjedhjen e produktit të duhur.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-paragraph text-lg font-semibold text-charcoal mb-3">
+                  <h4 className="font-paragraph text-base sm:text-lg font-semibold text-charcoal mb-2 md:mb-3">
                     Mbështetje për Projekte
                   </h4>
-                  <p className="font-paragraph text-sm text-secondary leading-relaxed">
+                  <p className="font-paragraph text-xs sm:text-sm text-secondary leading-relaxed">
                     Ofrojmë mbështetje të plotë për arkitektë, dizajnerë dhe kompani ndërtimi në specifikimin dhe instalimin e produkteve.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-12 pt-8 border-t border-light-grey/30">
-                <p className="font-paragraph text-sm text-secondary leading-relaxed">
+              <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-light-grey/30">
+                <p className="font-paragraph text-xs sm:text-sm text-secondary leading-relaxed">
                   <strong className="text-charcoal">Orari i punës:</strong><br />
                   E Hënë - E Premte: 09:00 - 18:00<br />
                   E Shtunë: 09:00 - 14:00<br />
@@ -324,23 +324,23 @@ export default function ContactPage() {
         </div>
       </section>
       {/* Map Section Placeholder */}
-      <section className="w-full py-24 bg-background">
-        <div className="max-w-[100rem] mx-auto px-20">
+      <section className="w-full py-16 md:py-24 bg-background">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-16 text-center"
+            className="bg-white p-8 md:p-12 lg:p-16 text-center"
           >
-            <MapPin className="w-16 h-16 text-charcoal mx-auto mb-6" strokeWidth={1.5} />
-            <h3 className="font-heading text-3xl text-charcoal mb-4">
+            <MapPin className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 text-charcoal mx-auto mb-4 md:mb-6" strokeWidth={1.5} />
+            <h3 className="font-heading text-2xl sm:text-3xl text-charcoal mb-3 md:mb-4">
               Vendndodhja Jonë
             </h3>
-            <p className="font-paragraph text-lg text-secondary mb-2">
+            <p className="font-paragraph text-base sm:text-lg text-secondary mb-1 md:mb-2">
               CoreFloor Albania
             </p>
-            <p className="font-paragraph text-base text-secondary">{"Vlorë, Shqipëri"}</p>
+            <p className="font-paragraph text-sm md:text-base text-secondary">{"Vlorë, Shqipëri"}</p>
           </motion.div>
         </div>
       </section>
