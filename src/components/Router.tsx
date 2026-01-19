@@ -7,7 +7,7 @@ import ProductsPage from '@/components/pages/ProductsPage';
 import WhySPCPage from '@/components/pages/WhySPCPage';
 import CertificationsPage from '@/components/pages/CertificationsPage';
 import ArchitectsPartnersPage from '@/components/pages/ArchitectsPartnersPage';
-import AboutPage from '@/components/pages/AboutPage';
+import ProjectsPage from '@/components/pages/ProjectsPage';
 import ContactPage from '@/components/pages/ContactPage';
 
 // Layout component that includes ScrollToTop
@@ -62,10 +62,10 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "rreth-nesh",
-        element: <AboutPage />,
+        path: "projektet-tona",
+        element: <ProjectsPage />,
         routeMetadata: {
-          pageIdentifier: 'about',
+          pageIdentifier: 'projects',
         },
       },
       {

@@ -145,3 +145,30 @@ export interface SPCFlooringProducts {
   /** @wixFieldType url */
   technicalDataSheetUrl?: string;
 }
+
+
+/**
+ * Collection ID: projects
+ * Interface for Projects
+ */
+export interface Projects {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  projectName?: string;
+  /** @wixFieldType text */
+  projectType?: string;
+  /** @wixFieldType text */
+  location?: string;
+  /** @wixFieldType text */
+  productUsed?: string;
+  /** @wixFieldType number */
+  completionYear?: number;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  mainImage?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  secondaryImage?: string;
+  /** @wixFieldType number */
+  displayOrder?: number;
+}

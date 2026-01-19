@@ -15,7 +15,7 @@ export default function Header() {
     { name: 'Pse SPC', path: '/pse-spc', hash: '' },
     { name: 'Certifikime', path: '/certifikime', hash: '' },
     { name: 'Arkitektë & Partnerë', path: '/arkitekte-partnere', hash: '' },
-    { name: 'Rreth Nesh', path: '/rreth-nesh', hash: '' },
+    { name: 'Projektet Tona', path: '/projektet-tona', hash: '' },
     { name: 'Kontakt', path: '/kontakt', hash: '' },
   ];
 
