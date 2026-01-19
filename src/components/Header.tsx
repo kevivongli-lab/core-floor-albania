@@ -29,12 +29,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <Image 
-              src="https://static.wixstatic.com/media/b9443e_fb4cc59f70184f708fed7ffefb7c34b4~mv2.png" 
-              alt="CoreFloor Albania Logo" 
+            <Image
+              src="https://static.wixstatic.com/media/b9443e_c2e6e99147a74d8295deebef979d764e~mv2.png"
               width={200}
-              className="h-14 w-auto object-contain"
-            />
+              className="h-14 w-auto object-contain border-black border border-none"
+              originWidth={500}
+              originHeight={500} />
           </Link>
 
           {/* Desktop Navigation */}
