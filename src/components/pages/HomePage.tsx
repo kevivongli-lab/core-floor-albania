@@ -136,7 +136,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 mb-6 bg-beige rounded-sm">
+                <div className="inline-flex items-center justify-center w-20 h-20 mb-6 rounded-sm bg-[#b8864fff]">
                   <advantage.icon className="w-10 h-10 text-charcoal" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading text-2xl text-charcoal mb-3">

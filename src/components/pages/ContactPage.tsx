@@ -74,7 +74,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-white py-24">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -93,7 +92,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Info Cards */}
       <section className="w-full py-16 bg-background">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -107,7 +105,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 text-center"
               >
-                <div className="w-16 h-16 bg-beige rounded-sm mx-auto mb-6 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-sm mx-auto mb-6 flex items-center justify-center bg-[#b8864fff]">
                   <info.icon className="w-8 h-8 text-charcoal" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading text-xl text-charcoal mb-3">
@@ -130,7 +128,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="w-full py-24 bg-white">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -326,7 +323,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Map Section Placeholder */}
       <section className="w-full py-24 bg-background">
         <div className="max-w-[100rem] mx-auto px-20">
@@ -350,7 +346,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
