@@ -191,8 +191,14 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="p-16 text-center bg-primary-foreground"
             >
-              <div className="mb-8">
-                <h3 className="font-heading text-4xl text-charcoal">Novocore</h3>
+              <div className="mb-8 flex justify-center">
+                <Image 
+                  src="https://static.wixstatic.com/media/b9443e_98970eab824a4f79b6c95935d0c0355c~mv2.png" 
+                  alt="Novocore - The NEXT Revolution in Waterproof Floors" 
+                  width={400}
+                  className="h-auto max-w-full"
+                  loading="lazy"
+                />
               </div>
               <p className="font-paragraph text-base text-secondary leading-relaxed">
                 Zgjidhje SPC me certifikime të larta për ambiente të shëndetshme dhe performancë të qëndrueshme
