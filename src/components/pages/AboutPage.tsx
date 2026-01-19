@@ -332,8 +332,14 @@ export default function AboutPage() {
               <p className="font-paragraph text-base text-secondary leading-relaxed mb-6">
                 Zgjidhje SPC premium me certifikime të larta për ambiente të shëndetshme dhe performancë të qëndrueshme.
               </p>
-              <p className="font-paragraph text-sm text-secondary">
+              <p className="font-paragraph text-base text-secondary leading-relaxed mb-6">
+                SE+® particles compromise the integrity of a microbe's cellmembrane, which leads to its deactivation.
+              </p>
+              <p className="font-paragraph text-sm text-secondary mb-3">
                 Distributor Ekskluziv për Shqipërinë
+              </p>
+              <p className="font-paragraph text-sm text-secondary italic">
+                Assure certified tek dokumentacioni
               </p>
             </motion.div>
           </div>
